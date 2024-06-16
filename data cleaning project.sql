@@ -40,7 +40,7 @@ FROM housing_data
 -- WHERE PropertyAddress IS NULL;
 ORDER BY ParcelID;
 
--- Here we're giving the PropertyAddress for the rows with value NULL in them from other rows where the ParcelID is the same
+-- Here we're providing the PropertyAddress for rows that have a NULL value, using data from other rows that have the same ParcelID.
 -- After the update the below shows nothing since there wownt be any PropertyAddresses with NULL values
 
 SELECT a.ParcelID, a.PropertyAddress, b.ParcelID, b.PropertyAddress, IFNULL(a.PropertyAddress, b.PropertyAddress)
