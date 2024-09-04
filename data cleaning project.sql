@@ -41,7 +41,7 @@ FROM housing_data
 ORDER BY ParcelID;
 
 -- Here we're providing the PropertyAddress for rows that have a NULL value, using data from other rows that have the same ParcelID.
--- After the update the below shows nothing since there wownt be any PropertyAddresses with NULL values
+-- After the update the below shows nothing since there wont be any PropertyAddresses with NULL values
 
 SELECT a.ParcelID, a.PropertyAddress, b.ParcelID, b.PropertyAddress, IFNULL(a.PropertyAddress, b.PropertyAddress)
 FROM housing_data a
